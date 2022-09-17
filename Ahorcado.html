@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Ud.2 - Relacion de ejercicios 5</title>
+    <link rel="stylesheet" href="estilo-ahoracado.css">
+  </head>
+  <body>
+      <div class="main-container">
+
+        <h1 class="titulo">Juego del ahorcado</h1>
+        <h1 id="msg-final"></h1>
+        <h3 id="acierto"></h3>
+        <div class="flex-row no-wrap">
+          <h2 class="palabra" id="palabra"></h2>
+          <picture>
+            <img src="img/ahorcado_6.png" id="image">
+          </picture>
+        </div>
+        <div class="flex-row" id="turnos">
+          <div class="col">
+            <h3>Intentos restantes: <span id="intentos">6</span></h3>
+          </div>
+          <div class="col">
+            <button id="reset">Elegir otra palabra</button>
+            <button id="pista">Dame una pista!</button>
+            <span id="hueco-pista" class="pista"></span>
+          </div>
+        </div>
+        
+        <div class="flex-row">
+          <div class="col">
+            <div class="flex-row" id="abcedario">
+              <button value="A" class="letra" id="A">A</button>
+              <button value="B" class="letra" id="B">B</button>
+              <button value="C" class="letra" id="C">C</button>
+              <button value="D" class="letra" id="D">D</button>
+              <button value="E" class="letra" id="E">E</button>
+              <button value="F" class="letra" id="F">F</button>
+              <button value="G" class="letra" id="G">G</button>
+              <button value="H" class="letra" id="H">H</button>
+              <button value="I" class="letra" id="I">I</button>
+              <button value="J" class="letra" id="J">J</button>
+              <button value="K" class="letra" id="K">K</button>
+              <button value="L" class="letra" id="L">L</button>
+              <button value="M" class="letra" id="M">M</button>
+              <button value="N" class="letra" id="N">N</button>
+              <button value="Ñ" class="letra" id="Ñ">Ñ</button>
+              <button value="O" class="letra" id="O">O</button>
+              <button value="P" class="letra" id="P">P</button>
+              <button value="Q" class="letra" id="Q">Q</button>
+              <button value="R" class="letra" id="R">R</button>
+              <button value="S" class="letra" id="S">S</button>
+              <button value="T" class="letra" id="T">T</button>
+              <button value="U" class="letra" id="U">U</button>
+              <button value="V" class="letra" id="V">V</button>
+              <button value="W" class="letra" id="W">W</button>
+              <button value="X" class="letra" id="X">X</button>
+              <button value="Y" class="letra" id="Y">Y</button>
+              <button value="Z" class="letra" id="Z">Z</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    <script src="ahorcado.js"></script>
+  </body>
+</html>

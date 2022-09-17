@@ -1,0 +1,140 @@
+* {
+  /* aplicamos la propiedad box-sizing con su valor border-box a todos los elementos y a todos los pseudoelementos del documento */
+  box-sizing: border-box;
+}
+.main-container {
+  /* ancho max 800px */
+  max-width: 800px;
+  /* todos los margenes automatico */
+  margin: auto;
+}
+h1.titulo {
+  /* margenes arriba 5px abajo 80px y derecha e izquierda automatico */
+  margin: 50px auto 80px auto;
+  /* texto centralizado */
+  text-align: center;
+  /* tipo de fuente  */
+  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+h1#msg-final {
+  /* texto centralizado */
+  text-align: center;
+  /* texto color carmesí */
+  color: crimson;
+  /* crea transicion de todas las propiedades de 0.5 segundos el cual empieza lento, despues es rapido y al final se ralentiza */
+  transition: all .5s ease;
+  /* cambia el tamaño del elemeto a cero */
+  transform: scale(0);
+  /* alto minimo 50px */
+  min-height: 50px;
+  /* margen abajo 0px */
+  margin-bottom: 0;
+}
+.zoom-in {
+  /* cambia tamaño del elemento al tamaño original, tiene adicional de ser importante lo que significa que será prioridad */
+  transform: scale(1) !important;
+}
+#acierto {
+  /* texto centralizado */
+  text-align: center;
+   /* alto minimo 24px */
+  min-height: 24px;
+   /* cambia el tamaño del elemeto a cero */
+  transform: scale(0);
+}
+.acierto {
+  /* ejecuta animacion zoomInOut durante un segundo el cual empieza lento, despues es rapido y al final se ralentiza */
+  animation: zoomInOut 1s ease;
+}
+.rojo {
+  /* color texto rojo */
+  color: red;
+}
+.verde {
+  /* color texto verde */
+  color: green;
+}
+
+/* se crea una animacion con el nombre zoomInOut el porcentaje es la progresion de la animacion */
+@keyframes zoomInOut {
+  /* tamaño al minimo  */
+  0% { transform: scale(0); }
+  /* tamaño normal */
+  50% { transform: scale(1); }
+  /* tamaño normal */
+  70% { transform: scale(1); }
+  /* tamaño al minimo */
+  100% { transform: scale(0); }
+}
+
+h2.palabra {
+  /* margenes arriba 0px abajo 25px derecha e izquierda automatico */
+  margin: 0 auto 25px auto;
+  /* texto centralizado */
+  text-align: center;
+  /* texto color royalblue */
+  color: royalblue;
+  /* texto en mayusculas */
+  text-transform: uppercase;
+  /* espacion entre letras 6px */
+  letter-spacing: 6px;
+}
+.flex-row {
+  /* hace que el elemento se pueda ordenar como una celdas dentro de una tabla */
+  display: flex;
+  /* contenido del elemento estará centralizada */
+  justify-content: center;
+  /* hace que los elementos hijos se puedan ordenar como celdas dentro de una tabla */
+  flex-wrap: wrap;
+  /* margenes arriba y abajo 10px y derecha e izquierda automatico */
+  margin: 10px auto; 
+}
+.no-wrap {
+  /* hace que los elemetos hijos no se puedan ordenar como celdas en una tabla */
+  flex-wrap: nowrap !important;
+}
+picture {
+  /* le asigna una posicion relativa */
+  position: relative;
+}
+picture img {
+  /* le asigna una posicion absoluta */
+  position: absolute;
+  /* arriba -203px */
+  top: -203px;
+  /* izquierda -205px */
+  left: -205px;
+  /* altura de 225px */
+  height: 225px;
+}
+/*⭕⭕⭕*/
+.pista{
+  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: rgb(0, 77, 0);
+}
+#turnos h3 {
+  /* margenes automatico */
+  margin: auto;
+}
+.col {
+  /* ancho de 50% */
+  width: 50%;
+  /* texto centralizado */
+  text-align: center;
+}
+h3 span {
+  /* color anaranjado */
+   color: orangered;
+}
+.letra:disabled {
+  /* color rojo con opacidad del 50% */
+  color:rgba(255, 0, 0, 0.5);
+}
+.encuadre {
+  /* borde de 2px color carmesi */
+  border: 2px dashed crimson;
+  /* espaciado interno arriba 3px derecha 2px abajo 2px izquierda 6px */
+  padding: 3px 2px 2px 6px;
+}
