@@ -118,6 +118,7 @@ function felicidadesGameOver(htmltext){
     let sound = new Audio('./sonidos/ganaste.mp3')
     sound.play()
   }
+  clearInterval(setintervalreloj);
   // imprime un mensaje en el objeto con el id msg-final
   document.getElementById("msg-final").innerHTML = htmltext || "";
   // agrega la clase zoom-in en el objeto con el id msg-final
@@ -151,10 +152,23 @@ function compruebaFin() {
     // asigna la funcion de recarga de pagina al objeto con id reset
   }
 }
+let segundos = 100
 
+function muestraReloj() {
+  if(segundos <= 0){
+    clearInterval(setintervalreloj);
+    
+    document.querySelectorAll('.letra').forEach(item => {
+      item.disabled=true
+    })
+  }
+  document.getElementById("reloj").innerHTML = segundos-- ;
+}
+let setintervalreloj
 // Restablecer juego
 function inicio() {
-
+  //agregar contador 
+  setintervalreloj = setInterval(muestraReloj, 1000);
   // ejecuta funcion generaPalabra
   generaPalabra();
   // ejecuta funcion pintarGuiones con el parametro del numero de caracteres
