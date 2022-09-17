@@ -110,6 +110,14 @@ function pista() {
 }
 //⭕⭕⭕ refactorizando
 function felicidadesGameOver(htmltext){
+  if ( htmltext == "Game Over"){
+    let sound = new Audio('./sonidos/fallo.mp3')
+    sound.play()
+  }
+  if ( htmltext == "Felicidades !!"){
+    let sound = new Audio('./sonidos/ganaste.mp3')
+    sound.play()
+  }
   // imprime un mensaje en el objeto con el id msg-final
   document.getElementById("msg-final").innerHTML = htmltext || "";
   // agrega la clase zoom-in en el objeto con el id msg-final
